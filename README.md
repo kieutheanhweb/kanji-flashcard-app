@@ -1,16 +1,119 @@
-# React + Vite
+漢字フラッシュカードアプリ 🀄
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+言語 / 技術: React, JavaScript, CSS
+対象ユーザー: 日本語を学ぶ学生
 
-Currently, two official plugins are available:
+💡 プロジェクトについて
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+このプロジェクトは 漢字フラッシュカードアプリ です。
+漢字を学ぶ学生のために作られました。
 
-## React Compiler
+このアプリでできること：
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+表に漢字、裏に意味があるフラッシュカードを見る
 
-## Expanding the ESLint configuration
+カードをクリックして 裏返す
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+自分で漢字と意味を追加する
+
+追加した漢字の 履歴 を確認する
+
+履歴から選択した漢字を削除する
+
+Reactの useState と useEffect を使って作られており、
+レスポンシブデザインで、PCでもスマホでも使いやすいです。
+
+📁 機能
+フラッシュカード画面
+
+最初から入っている漢字: 日, 学, 生 （削除不可）
+
+カードをクリックして 裏返す
+
+「次へ」ボタンで 次のカードに移動
+
+フォームで 新しい漢字を追加
+
+履歴画面
+
+ユーザーが追加した漢字を グリッド表示
+
+チェックボックスで漢字を選択
+
+選択した漢字を 削除
+
+デフォルトカードは削除できません
+
+保存
+
+ユーザーが追加した漢字は localStorage に保存
+
+ページを更新してもデータは消えません
+
+レスポンシブデザイン
+
+PCとスマホ対応
+
+小さい画面ではカードサイズと文字サイズが自動調整
+
+🛠 実行方法
+
+リポジトリをクローン
+
+git clone https://github.com/your-username/kanji-flashcard-app.git
+
+
+プロジェクトフォルダに移動
+
+cd kanji-flashcard-app
+
+
+依存パッケージをインストール
+
+npm install
+
+
+アプリを起動
+
+npm run dev
+
+
+ブラウザで開く
+
+http://localhost:5173
+
+⚡ 使用技術
+
+React: UI作成
+
+useState & useEffect: 状態管理とlocalStorage
+
+CSS Flex & Grid: レイアウト
+
+レスポンシブデザイン: スマホ対応
+
+🎨 デザイン
+
+シンプルで柔らかいグラデーション背景
+
+3Dフリップ効果のカード
+
+ホバーで動くボタンと影
+
+履歴リストはグリッドで整理されて見やすい
+
+🔮 今後の改善予定
+
+漢字を カテゴリー分け
+
+履歴で 検索機能
+
+クイズモード で記憶力テスト
+
+👨‍💻 作成者
+
+名前: Kiều Thế Anh
+
+役割: 日本でITを学ぶ学生
+
+GitHub: [Your GitHub link]
