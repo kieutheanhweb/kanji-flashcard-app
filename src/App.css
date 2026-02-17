@@ -1,0 +1,250 @@
+/* すべての要素をリセットする */
+*{
+  box-sizing: border-box; /* paddingを含めてサイズを計算 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 画面の基本デザイン */
+body{
+  background: linear-gradient(145deg,#f5f7fa,#e4ebf5); /* やわらかい背景 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#102a43;
+  min-height:100vh;
+  display:flex; /* 真ん中に配置するため */
+  justify-content:center; /* 横方向の中央 */
+  padding:40px 20px;
+}
+
+/* メインコンテナ */
+.container{
+  max-width:900px; /* 横幅の最大サイズ */
+  width:100%;
+  text-align:center; /* 文字を中央にする */
+}
+
+/* タイトル */
+h1{
+  font-size:48px;
+  color:#334e68;
+  margin-bottom:30px;
+  letter-spacing:2px; /* 文字の間を少し広げる */
+  text-shadow:1px 1px 2px rgba(0,0,0,0.08); /* 少し影をつける */
+}
+
+/* ボタンの基本デザイン */
+button{
+  padding:12px 28px;
+  margin:10px 6px;
+  font-size:16px;
+  font-weight:600;
+  border-radius:8px;
+  border:none;
+  cursor:pointer; /* マウスを乗せると手の形 */
+  transition:0.3s; /* アニメーションをなめらかに */
+  box-shadow:0 4px 8px rgba(0,0,0,0.12);
+}
+
+/* ボタンにマウスを乗せたとき */
+button:hover{
+  transform:translateY(-3px); /* 少し上に動く */
+  box-shadow:0 8px 16px rgba(0,0,0,0.18);
+}
+
+/* メインボタン */
+.primary{
+  background:#5c6bc0;
+  color:white;
+}
+
+/* メインボタンのhover */
+.primary:hover{
+  background:#3949ab;
+}
+
+/* 削除ボタン */
+.danger{
+  background:#ef5350;
+  color:white;
+}
+
+/* 削除ボタンのhover */
+.danger:hover{
+  background:#e53935;
+}
+
+/* フラッシュカード */
+.card{
+  width:280px;
+  height:170px;
+  margin:20px auto;
+  perspective:1200px; /* 3D効果のため */
+  cursor:pointer;
+}
+
+/* カードの中 */
+.inner{
+  width:100%;
+  height:100%;
+  position:relative;
+  transition:0.7s;
+  transform-style:preserve-3d; /* 回転のために必要 */
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* クリックしたとき回転 */
+.flip{
+  transform:rotateY(180deg) scale(1.4);
+}
+
+/* 表面 */
+.front{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  backface-visibility:hidden; /* 裏面を隠す */
+  font-weight:bold;
+  background:white;
+  font-size:46px;
+  color:#102a43;
+}
+
+/* 裏面 */
+.back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  backface-visibility:hidden;
+  font-weight:bold;
+  background:#4dd0e1;
+  transform:rotateY(180deg); /* 回転させる */
+  color:white;
+  font-size:26px;
+  padding:12px;
+  text-align:center;
+}
+
+/* 入力エリア */
+.input-area{
+  margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* 入力ボックス */
+.input-area input{
+  padding:10px;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #bbb;
+  margin:8px 0;
+  width:220px;
+  outline:none;
+  transition:0.2s;
+}
+
+/* 入力中のデザイン */
+.input-area input:focus{
+  border-color:#5c6bc0;
+  box-shadow:0 0 8px rgba(92,107,192,0.3);
+}
+
+/* 履歴リスト */
+.history-list{
+  display:grid; /* グリッドを使う */
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:20px;
+  margin-top:30px;
+  justify-items:center;
+}
+
+/* 履歴カード */
+.history-card{
+  background:white;
+  border-radius:20px;
+  padding:20px 14px;
+  width:160px;
+  min-height:140px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+/* 履歴カードにマウスを乗せたとき */
+.history-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* チェックボックス */
+.history-card input{
+  width:26px;
+  height:26px;
+  accent-color:#5c6bc0;
+  margin-bottom:12px;
+  cursor:pointer;
+}
+
+/* 漢字表示 */
+.history-card span{
+  font-size:26px;
+  font-weight:700;
+  color:#102a43;
+  text-align:center;
+  margin-bottom:6px;
+}
+
+/* 意味の表示 */
+.history-card small{
+  font-size:14px;
+  color:#627d98;
+  text-align:center;
+  word-break:break-word; /* 長い文字のとき改行 */
+}
+
+/* スマホ用 */
+@media(max-width:500px){
+  .card{
+    width:200px;
+    height:140px;
+  }
+
+  .front{
+    font-size:36px;
+  }
+
+  .back{
+    font-size:20px;
+  }
+
+  .history-card{
+    width:140px;
+    min-height:120px;
+  }
+
+  .history-card span{
+    font-size:22px;
+  }
+
+  .history-card small{
+    font-size:12px;
+  }
+
+  .input-area input{
+    width:160px;
+  }
+}
