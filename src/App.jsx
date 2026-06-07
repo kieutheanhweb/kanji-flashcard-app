@@ -31,7 +31,7 @@ function App() {
         <button className="primary" onClick={changePage}>
           {
             showFlash === true
-              ? "追加履歴を見る" // フラッシュ画面のとき
+              ? "追加履歴" // フラッシュ画面のとき
               : "戻る" // 履歴画面のとき
           }
         </button>

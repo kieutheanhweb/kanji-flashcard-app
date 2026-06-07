@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 // フォームコンポーネントを読み込む
-import KanjiForm from "./KanjiForm.jsx";
+import KanjiForm from "./KanjiForm.jsx"
 
 // 最初から入っている漢字データ（この3つは消えない）
 const defaultCards = [
